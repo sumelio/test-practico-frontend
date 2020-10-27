@@ -1,0 +1,24 @@
+{
+  "name": "backend-express",
+  "version": "1.0.0",
+  "description": "backend node for challenger",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "start": "node ./index.js"
+  },
+  "author": "Freddy Lemus",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.20.0",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "ip": "1.1.5",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.3"
+  }
+}

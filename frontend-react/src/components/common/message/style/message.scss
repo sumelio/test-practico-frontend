@@ -1,0 +1,16 @@
+@import '../../../../sass/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.result {
+  padding: 20px;
+  text-align: center;
+  &--hide {
+    opacity: 0;
+  }
+  &--show {
+    opacity: 1;
+  }
+  @include media-breakpoint-only(xs) {
+    width: 100%;
+  }
+}

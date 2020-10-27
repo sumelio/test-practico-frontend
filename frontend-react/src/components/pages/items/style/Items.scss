@@ -1,0 +1,16 @@
+@import '../../../../sass/variables';
+
+.list {
+  &--hide {
+    opacity: 0;
+  }
+  &--show {
+    opacity: 1;
+  }
+
+  &__item {
+   border-radius: $container-radius;
+   background-color: white;
+   color: $black;
+  }
+}

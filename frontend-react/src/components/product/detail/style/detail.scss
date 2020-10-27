@@ -1,0 +1,104 @@
+@import "../../../../sass/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.col {
+  min-width: auto;
+}
+
+.detail {
+  background-color: $white;
+  .picture {
+    margin: auto;
+    @include media-breakpoint-up(sm) {
+      height: $picture-size/1.75;
+      width: $picture-size/1.75;
+    }
+    @include media-breakpoint-up(md) {
+      height: $picture-size/1.375;
+      width: $picture-size/1.375;
+    }
+    @include media-breakpoint-up(lg) {
+      height: $picture-size * 0.7;
+      width: $picture-size * 0.7;
+    }
+    @include media-breakpoint-only(xl) {
+      height: $picture-size;
+      width: $picture-size;
+    }
+  }
+
+  .info {
+    padding: $small-space $large-space $large-space;
+    @include media-breakpoint-up(xl) {
+      padding: $large-space 0 0;
+    }
+    color: $black;
+
+    &__condition {
+      font-size: $font-sm;
+      @include media-breakpoint-up(sm) {
+        padding-bottom: $small-space;
+      }
+    }
+
+    &__title {
+      font-size: $font-lg;
+      font-weight: $bold;
+      padding-right: $large-space;
+
+      @include media-breakpoint-only(xs) {
+        padding-right: 0;
+      }
+    }
+
+    .price {
+      padding-top: $large-space;
+      padding-bottom: $large-space;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: $small-space;
+      }
+
+      &__amount {
+        font-size: $font-xl;
+      }
+      &__decimals {
+        font-size: $font-lg;
+        position: relative;
+        bottom: 16px;
+      }
+      &__shipping {
+        padding-left: 8px;
+      }
+    }
+
+    &__button {
+      @include media-breakpoint-up(xl) {
+        padding-right: $large-space;
+      }
+    }
+  }
+
+  .description {
+    $title-size: 28px;
+    $content-size: 16px;
+    padding-left: $large-space;
+
+    @include media-breakpoint-down(lg) {
+      padding-right: $large-space;
+    }
+
+    &__title {
+      font-size: $title-size;
+      color: $black;
+      padding-bottom: $large-space;
+    }
+
+    &__content {
+      font-size: $content-size;
+      color: $gray;
+      padding-bottom: $large-space;
+      white-space: pre-line;
+    }
+  }
+}
